@@ -54,10 +54,15 @@ export class IconElement extends LitElement {
     return html`
       <link-element href=${this.link}>
         <div>
-          <img class="icon" src="/src/assets/icons/${this.icon}.svg" />
+          <img
+            class="icon"
+            src="https://raw.githubusercontent.com/Riki1312/startlab-website/main/src/assets/icons/${this
+              .icon}.svg"
+          />
           <img
             class="icon-text"
-            src="/src/assets/icons/${this.icon}_text.svg"
+            src="https://raw.githubusercontent.com/Riki1312/startlab-website/main/src/assets/icons/${this
+              .icon}_text.svg"
           />
         </div>
       </link-element>

@@ -7,7 +7,7 @@ export class HomePage extends LitElement {
     }
 
     .section-a {
-      --section-background-image: url("/src/assets/bg.svg");
+      --section-background-image: url("https://raw.githubusercontent.com/Riki1312/startlab-website/main/src/assets/bg.svg");
     }
 
     .icons-list {

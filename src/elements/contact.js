@@ -15,6 +15,10 @@ export class ContactElement extends LitElement {
       animation: rotating 10s linear infinite;
     }
 
+    svg:hover {
+      animation-play-state: paused;
+    }
+
     @keyframes rotating {
       from {
         transform: rotate(0deg);

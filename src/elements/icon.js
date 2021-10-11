@@ -29,6 +29,10 @@ export class IconElement extends LitElement {
       animation: rotating 10s linear infinite;
     }
 
+    .icon-text:hover {
+      animation-play-state: paused;
+    }
+
     @keyframes rotating {
       from {
         transform: rotate(0deg);
@@ -56,11 +60,13 @@ export class IconElement extends LitElement {
         <div>
           <img
             class="icon"
+            alt="Icon link to ${this.link}"
             src="https://raw.githubusercontent.com/Riki1312/startlab-website/main/src/assets/icons/${this
               .icon}.svg"
           />
           <img
             class="icon-text"
+            alt="Icon link text"
             src="https://raw.githubusercontent.com/Riki1312/startlab-website/main/src/assets/icons/${this
               .icon}_text.svg"
           />

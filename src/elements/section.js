@@ -23,9 +23,9 @@ export class SectionElement extends LitElement {
 
     .footer {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
-      align-items: flex-end;
+      align-items: center;
 
       margin-bottom: 80px;
     }
@@ -34,6 +34,14 @@ export class SectionElement extends LitElement {
       background-color: var(--text-01);
       width: 100%;
       height: 2px;
+    }
+
+    /* lg */
+    @media (min-width: 1024px) {
+      .footer {
+        flex-direction: row;
+        align-items: flex-end;
+      }
     }
   `;
 
@@ -65,9 +73,9 @@ export class SectionElement extends LitElement {
             ? html`<div class="footer">
                 <body-long-02>STARTLAB©2021 — Riccardo Brero</body-long-02>
                 <body-long-02>
-                  <link-element href="#">IG</link-element>,
-                  <link-element href="#">TW</link-element>,
-                  <link-element href="#">LI</link-element> and
+                  <link-element href="#">IG</link-element>,&nbsp;
+                  <link-element href="#">TW</link-element>,&nbsp;
+                  <link-element href="#">LI</link-element>&nbsp;and&nbsp;
                   <link-element href="#">DI</link-element>
                 </body-long-02>
               </div>`

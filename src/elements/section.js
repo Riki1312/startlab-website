@@ -71,7 +71,7 @@ export class SectionElement extends LitElement {
         <div>
           ${this.links
             ? html`<div class="footer">
-                <body-long-02>STARTLAB©2021 — Riccardo Brero</body-long-02>
+                <body-long-02>STARTLAB©2022 — Riccardo Brero</body-long-02>
                 <body-long-02>
                   <link-element href="#">IG</link-element>,&nbsp;
                   <link-element href="#">TW</link-element>,&nbsp;

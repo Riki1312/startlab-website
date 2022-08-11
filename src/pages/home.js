@@ -30,7 +30,7 @@ export class HomePage extends LitElement {
 
       <section-element
         class="section-a"
-        title="STARTLAB©2021 — Riccardo Brero"
+        title="STARTLAB©2022 — Riccardo Brero"
         logo
       >
         <display-01>
@@ -88,7 +88,7 @@ export class HomePage extends LitElement {
             hello@startlab.dev
           </link-element>
           <br />
-          +39 373508XXXX — @startlab
+          @startlab
         </display-01>
 
         <div class="icons-list">

@@ -1,6 +1,6 @@
 # startlab-website
 
-https://startlab.dev/
+<https://startlab.dev/>
 
 ## Building
 

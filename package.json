@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "@startlab/website",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,6 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "format": "prettier --write .",
     "astro": "astro"
   },
   "devDependencies": {

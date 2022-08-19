@@ -1,14 +1,12 @@
-# Welcome to [Astro](https://astro.build)
+# startlab-website
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<https://startlab.dev/>
 
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
-```
+```bash
 /
 ├── public/
 │   └── favicon.ico

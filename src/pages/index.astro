@@ -7,6 +7,7 @@ import Grid from "../components/Grid.astro";
 import Icons from "../components/Icons.astro";
 import Link from "../components/Link.astro";
 import Section from "../components/Section.astro";
+import Space from "../components/Space.astro";
 import Text from "../components/Text.astro";
 ---
 
@@ -16,14 +17,14 @@ import Text from "../components/Text.astro";
   <Section
     title="STARTLAB©2022 — Riccardo Brero"
     logo={true}
-    backgroundImage={"url('./bg.svg')"}
+    backgroundImage={"url('https://raw.githubusercontent.com/Riki1312/startlab-website/main/src/assets/bg.svg')"}
   >
     <Display>
       Freelance <u>DESIGNER</u> & DEVELOPER with a focus on WEBSITES, EXPERIENCES
       and INTERFACES. Based in <u>ITALY</u>, working REMOTELY.
     </Display>
 
-    <div class="space"></div>
+    <Space />
   </Section>
 
   <Section title="SOME WORDS">
@@ -74,8 +75,6 @@ import Text from "../components/Text.astro";
   </Section>
 
   <style>
-    .space {
-      height: 20%;
-    }
+
   </style>
 </Layout>

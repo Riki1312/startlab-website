@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import Contact from "../components/Contact.astro";
 import Display from "../components/Display.astro";
 import Grid from "../components/Grid.astro";
+import Icons from "../components/Icons.astro";
 import Link from "../components/Link.astro";
 import Section from "../components/Section.astro";
 import Text from "../components/Text.astro";
@@ -61,10 +62,20 @@ import Text from "../components/Text.astro";
       </Text>
     </Grid>
   </Section>
-</Layout>
 
-<style>
-  .space {
-    height: 20%;
-  }
-</style>
+  <Section title="CONTACT" links={true}>
+    <Display>
+      <Link href="mailto:hello@startlab.dev">hello@startlab.dev</Link>
+      <br />
+      @startlab
+    </Display>
+
+    <Icons />
+  </Section>
+
+  <style>
+    .space {
+      height: 20%;
+    }
+  </style>
+</Layout>

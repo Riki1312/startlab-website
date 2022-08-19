@@ -1,0 +1,60 @@
+---
+import Link from "./Link.astro";
+
+export interface Props {
+  icon: string;
+  href?: string;
+}
+
+const { icon, href = "#" } = Astro.props as Props;
+---
+
+<a href={href}>
+  <div>
+    <img
+      class="icon"
+      alt={"Icon link to " + href}
+      src={"./icons/" + icon + ".svg"}
+    />
+    <img class="icon-text" alt="Icon text" src={"./icons/" + icon + "_text.svg"}
+    />
+  </div>
+</a>
+
+<style>
+  div {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  .icon {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-text {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    height: 200px;
+    animation: rotating 10s linear infinite;
+  }
+
+  .icon-text:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>

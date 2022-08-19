@@ -21,6 +21,8 @@ const {
   /* CSS Variables */
   backgroundImage = "",
 } = Astro.props as Props;
+
+const year = new Date().getFullYear();
 ---
 
 <div class="container">
@@ -35,7 +37,7 @@ const {
     {
       links && (
         <div class="footer">
-          <Text>STARTLAB©2022 — Riccardo Brero</Text>
+          <Text>{"STARTLAB©" + year + " — Riccardo Brero"}</Text>
           <Text Tag="div">
             <div class="links">
               <Link>IG</Link>,&nbsp;

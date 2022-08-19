@@ -9,72 +9,89 @@ import Link from "../components/Link.astro";
 import Section from "../components/Section.astro";
 import Space from "../components/Space.astro";
 import Text from "../components/Text.astro";
+
+const year = new Date().getFullYear();
 ---
 
 <Layout title="STARTLAB — Riccardo Brero">
-  <Contact />
+  <div class="page">
+    <Contact />
 
-  <Section
-    title="STARTLAB©2022 — Riccardo Brero"
-    logo={true}
-    backgroundImage={"url('https://raw.githubusercontent.com/Riki1312/startlab-website/main/src/assets/bg.svg')"}
-  >
-    <Display>
-      Freelance <u>DESIGNER</u> & DEVELOPER with a focus on WEBSITES, EXPERIENCES
-      and INTERFACES. Based in <u>ITALY</u>, working REMOTELY.
-    </Display>
+    <div class="section">
+      <Section
+        title={"STARTLAB©" + year + " — Riccardo Brero"}
+        logo={true}
+        backgroundImage={"url('https://raw.githubusercontent.com/Riki1312/startlab-website/main/src/assets/bg.svg')"}
+      >
+        <Display>
+          Freelance <u>DESIGNER</u> & DEVELOPER with a focus on WEBSITES, EXPERIENCES
+          and INTERFACES. Based in <u>ITALY</u>, working REMOTELY.
+        </Display>
 
-    <Space />
-  </Section>
+        <Space />
+      </Section>
+    </div>
 
-  <Section title="SOME WORDS">
-    <Grid>
-      <Text>
-        → Hello <br />
-        I'm a computer science student with a passion for technology and design.
-        I create applications and websites for companies and individuals all over
-        the world. Focused on creating beautiful digital experiences through the
-        most innovative technologies.
-      </Text>
+    <div class="section">
+      <Section title="SOME WORDS">
+        <Grid>
+          <Text>
+            → Hello <br />
+            I'm a computer science student with a passion for technology and design.
+            I create applications and websites for companies and individuals all
+            over the world. Focused on creating beautiful digital experiences through
+            the most innovative technologies.
+          </Text>
 
-      <Text>
-        → Education <br />
-        I graduated in computer science at the G. Vallauri Institute of Higher Education
-        in Fossano. I am currently continuing my studies at the University of Turin.
-      </Text>
+          <Text>
+            → Education <br />
+            I graduated in computer science at the G. Vallauri Institute of Higher
+            Education in Fossano. I am currently continuing my studies at the University
+            of Turin.
+          </Text>
 
-      <Text>
-        → Experience <br />
-        I worked as an intern at Alstom Ferroviaria and at Etinet.it in Savigliano.
-      </Text>
-    </Grid>
+          <Text>
+            → Experience <br />
+            I worked as an intern at Alstom Ferroviaria and at Etinet.it in Savigliano.
+          </Text>
+        </Grid>
 
-    <Grid>
-      <Text>
-        <Link href="https://bewond.com/">Bewond.com</Link>
-        <br />
-        Fantastic new startup that I founded and am working on.
-      </Text>
+        <Grid>
+          <Text>
+            <Link href="https://bewond.com/">Bewond.com</Link>
+            <br />
+            Fantastic new startup that I founded and am working on.
+          </Text>
 
-      <Text>
-        <Link href="https://codeframe.org/">Codeframe.org</Link>
-        <br />
-        Innovative project currently under development.
-      </Text>
-    </Grid>
-  </Section>
+          <Text>
+            <Link href="https://codeframe.org/">Codeframe.org</Link>
+            <br />
+            Innovative project currently under development.
+          </Text>
+        </Grid>
+      </Section>
+    </div>
 
-  <Section title="CONTACT" links={true}>
-    <Display>
-      <Link href="mailto:hello@startlab.dev">hello@startlab.dev</Link>
-      <br />
-      @startlab
-    </Display>
+    <div class="section">
+      <Section title="CONTACT" links={true}>
+        <Display>
+          <Link href="mailto:hello@startlab.dev">hello@startlab.dev</Link>
+          <br />
+          @startlab
+        </Display>
 
-    <Icons />
-  </Section>
-
-  <style>
-
-  </style>
+        <Icons />
+      </Section>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  .page {
+    scroll-snap-type: y mandatory;
+  }
+
+  .section {
+    scroll-snap-align: start;
+  }
+</style>

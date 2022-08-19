@@ -1,0 +1,20 @@
+---
+export interface Props {
+  Tag?: string;
+}
+
+const { Tag = "p" } = Astro.props as Props;
+---
+
+<Tag><slot /></Tag>
+
+<style>
+  * {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: clamp(14px, 3vw, 24px);
+    font-weight: 400;
+    letter-spacing: 0px;
+
+    margin: 0px;
+  }
+</style>

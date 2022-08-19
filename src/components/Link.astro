@@ -1,0 +1,27 @@
+---
+export interface Props {
+  href?: string;
+}
+
+const { href = "#" } = Astro.props as Props;
+---
+
+<a href={href}><slot /></a>
+
+<style>
+  a {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: clamp(14px, 3vw, 24px);
+    font-weight: 400;
+    letter-spacing: 0px;
+
+    margin: 0px;
+
+    color: var(--text-01);
+  }
+
+  a:hover {
+    color: var(--ui-background);
+    background: var(--text-01);
+  }
+</style>

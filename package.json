@@ -1,19 +1,17 @@
 {
-  "name": "startlab-website",
-  "private": true,
+  "name": "@example/basics",
   "version": "0.0.1",
-  "files": [
-    "dist"
-  ],
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
-  },
-  "dependencies": {
-    "lit": "^2.2.8"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "devDependencies": {
-    "vite": "^3.0.4"
+    "astro": "^1.0.6",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.0"
   }
 }

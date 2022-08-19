@@ -1,0 +1,25 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<div class="list">
+  <Icon icon="icon01" href="mailto:hello@startlab.dev" />
+  <Icon icon="icon02" href="mailto:hello@startlab.dev" />
+  <Icon icon="icon03" href="mailto:hello@startlab.dev" />
+  <Icon icon="icon04" href="mailto:hello@startlab.dev" />
+</div>
+
+<style>
+  .list {
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .list {
+      display: flex;
+    }
+  }
+</style>

@@ -1,0 +1,13 @@
+<div class="grid">
+  <slot />
+</div>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+    grid-auto-rows: max-content;
+    column-gap: 100px;
+    row-gap: 40px;
+  }
+</style>

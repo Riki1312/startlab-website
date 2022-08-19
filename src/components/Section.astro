@@ -1,0 +1,103 @@
+---
+import Heading from "./Heading.astro";
+import Link from "./Link.astro";
+import Logo from "./Logo.astro";
+import Text from "./Text.astro";
+
+export interface Props {
+  title: string;
+  logo?: boolean;
+  links?: boolean;
+
+  /* CSS Variables */
+  backgroundImage?: string;
+}
+
+const {
+  title,
+  logo = false,
+  links = false,
+
+  /* CSS Variables */
+  backgroundImage = "",
+} = Astro.props as Props;
+
+const year = new Date().getFullYear();
+---
+
+<div class="container">
+  <div class="header">
+    <Heading>{title}</Heading>
+    {logo && <Logo />}
+  </div>
+
+  <slot />
+
+  <div>
+    {
+      links && (
+        <div class="footer">
+          <Text>{"STARTLAB©" + year + " — Riccardo Brero"}</Text>
+          <Text Tag="div">
+            <div class="links">
+              <Link>IG</Link>,&nbsp;
+              <Link>TW</Link>,&nbsp;
+              <Link>LI</Link>&nbsp; and&nbsp;
+              <Link>DI</Link>
+            </div>
+          </Text>
+        </div>
+      )
+    }
+    <div class="line"></div>
+  </div>
+</div>
+
+<style define:vars={{ backgroundImage }}>
+  .container {
+    background-image: var(--backgroundImage);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(100vh - 20px);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .line {
+    background-color: var(--text-01);
+    width: 100%;
+    height: 2px;
+  }
+
+  /* lg */
+  @media (min-width: 1024px) {
+    .footer {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  }
+</style>

@@ -1,0 +1,49 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Freelance DESIGNER & DEVELOPER with a focus on WEBSITES, EXPERIENCES and INTERFACES. Based in ITALY, working REMOTELY."
+    />
+    <meta name="keywords" content="STARTLAB, Design, Development" />
+    <meta name="author" content="Riccardo Brero" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap");
+
+      :root {
+        --ui-background: #ffffff;
+        --text-01: #161616;
+        --text-02: #525252;
+        --text-03: #a8a8a8;
+      }
+
+      body {
+        font-family: "IBM Plex Sans", sans-serif;
+        background-color: var(--ui-background);
+        color: var(--text-01);
+
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </body>
+</html>
